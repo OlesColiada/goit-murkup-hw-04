@@ -423,42 +423,33 @@ h2.customers-section {
     list-style: none;
 }
 
-/*Чи не кнопка це??????*/
+.customer-li {
+    width: 168px;
+    height: 88px;
+    color: var(--outline-customers);
+}
+
+.customer-li:hover,
+.customer-li:focus {
+    color: var(--active-btn-color);
+    cursor: pointer;
+}
+
 .customer-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: var(--outline-customers);
+    color: currentColor;
     width: 100%;
     height: 100%;
-    border: 1px solid var(--outline-customers);
+    border: 1px solid currentColor;
     border-radius: 4px;
-    
 }
-
-.customer-li {
-    width: 168px;
-    height: 88px;
-}
-
-.customer-container:hover,
-.customer-container:focus {
-    border: 1px solid var(--active-btn-color);
-    cursor: pointer;
-}
-
 
 .customer-logo {
+    display: block;
     fill: currentColor;
-    padding: 20px;
 }
-
-.customer-logo:hover,
-.customer-logo:focus {
-    fill: var(--active-btn-color);
-    cursor: pointer;
-}
-
 
             /*Footer section*/
 
@@ -558,7 +549,8 @@ li.card-item {
 }
 
 a.card {
-    display: block;
+    display: flex;
+    flex-direction: column;
     width: 100%;
     height: 100%;
 }
@@ -575,16 +567,10 @@ img.gallery-pic {
 }
 
 div.work-describe {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    overflow: hidden;
-    width: 100%;
+    flex-grow: 1;
     border: 1px solid var(--footer-small-text-color);
     border-top: none;
     padding: 32px 0px 32px 16px;
-
 }
 
 
