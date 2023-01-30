@@ -289,13 +289,15 @@ h3.features-list {
 }
 
 .features-rectangle {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 264px;
     height: 112px;
     background-color: var(--cloud-bg-color);
     border-radius: 4px;
     margin-bottom: 8px;
-    padding: 24px 100px;
+   
 }
 
 .features-icon {
@@ -389,9 +391,11 @@ img.team-image {
 }
 
 .circle-team-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 40px;height: 40px;
     background-color: var(--main-brand-color);
-    padding: 12px;
     border-radius: 50%;
 }
 
@@ -421,12 +425,20 @@ h2.customers-section {
 
 /*Чи не кнопка це??????*/
 .customer-container {
-    display: block;
-    width: 168px;
-    height: 88px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--outline-customers);
+    width: 100%;
+    height: 100%;
     border: 1px solid var(--outline-customers);
     border-radius: 4px;
-    padding: 16px 32px;
+    
+}
+
+.customer-li {
+    width: 168px;
+    height: 88px;
 }
 
 .customer-container:hover,
@@ -435,8 +447,9 @@ h2.customers-section {
     cursor: pointer;
 }
 
+
 .customer-logo {
-    fill: var(--outline-customers);
+    fill: currentColor;
     padding: 20px;
 }
 
@@ -502,11 +515,13 @@ p {
 }
 
 .circle-footer-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 50%;
     height: 40px;
     width: 40px;
-    padding: 12px;
 }
 
 .circle-footer-link:hover,
@@ -526,43 +541,55 @@ ul.list.nav-potfolio {
 .portfolio-but:hover,
 .portfolio-but:focus {
     box-shadow: 0px 2px 2px 0px #0000001F, 0px 2px 1px 0px #00000014;
-
-
 }
 
 ul.gallery.list {
     display: flex;
     flex-wrap: wrap;
-    margin-top: -24px;
-    margin-left: -24px;
+    justify-content: center;
+    gap: 48px 24px;
+
 }
 
 li.card-item {
-   flex-basis: calc( 100% / 3 - 24px );  
-   margin-top: 24px;
-   margin-left: 24px;
-   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
-   cursor: pointer;
+    flex-basis: calc( 100% / 3 - 24px ); 
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
+    cursor: pointer;
 }
 
-li.card-item:hover,
-li.card-item:focus {
+a.card {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+a.card:hover,
+a.card:focus {
     box-shadow: 0px 2px 1px 0px #2E2F4214, 0px 1px 1px 0px #2E2F4229;
 }
 
-div.work-describe {
-    border: 1px solid var(--footer-small-text-color);
-    border-top: none;
-    padding: 32px 0px 32px 16px;
-}
-div.gallery-pic>img {
+img.gallery-pic {
     display: block;
     max-width: 100%;
     max-height: auto;
 }
 
-h3.work-title {
-    margin-bottom: 8px;
+div.work-describe {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    overflow: hidden;
+    width: 100%;
+    border: 1px solid var(--footer-small-text-color);
+    border-top: none;
+    padding: 32px 0px 32px 16px;
+
 }
 
 
+h3.work-title {
+    margin-bottom: 8px;
+} 
+
+ 
